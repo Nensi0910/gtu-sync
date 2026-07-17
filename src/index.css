@@ -1,0 +1,1584 @@
+/* ==========================================================================
+   1. GLOBAL VARIABLES & STYLES
+   ========================================================================== */
+:root {
+  --primary: #4f46e5;
+  --secondary: #6366f1;
+  --bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --white: #ffffff;
+}
+/* 1. Scale up the container wrapper */
+.tab-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;                  /* Increases space between the icon, text, and X */
+    padding: 10px 20px;          /* Increases the height and width padding */
+    border-radius: 12px;         /* Keeps the rounded look matching image_700f62.png */
+    background-color: #1a1a1a;   /* Your dark background */
+}
+
+/* 2. Scale up the blue logo icon */
+.logo-icon {
+    width: 30px;                 /* Increase from default small sizes */
+    height: 30px;
+    border-radius: 6px;
+}
+
+/* 3. Scale up the "G1" text */
+.tab-text {
+    font-size: 1.25rem;          /* Makes the text "G1" larger and highly visible */
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* 4. Scale up the close 'X' button */
+.close-btn {
+    font-size: 1.1rem;           /* Increases the size of the X */
+    cursor: pointer;
+    color: #cccccc;
+}
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Inter', sans-serif; 
+}
+
+body { 
+  background-color: var(--bg); 
+  color: var(--text-dark); 
+  overflow-x: hidden; 
+  font-size: 115%; /* Globally scales up the base text size for the site */
+}
+
+/* Common wrapper layout used across different pages */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 4%;
+}
+
+/* ===================== LANDING PAGE MODULES ===================== */
+.section-tag {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 16px;
+  font-weight: 700;
+}
+.yellow-tag {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.section-desc {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1rem;
+  margin-bottom: 46px;
+}
+
+/* Feature & Testimonial Cards */
+.feature-card, .testimonial-card {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+.feature-card h3 {
+  font-size: 1.35rem;
+  margin: 20px 0 10px;
+  color: var(--text-dark);
+}
+.feature-card p, .testimonial-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.feature-list li {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feature-list li i {
+  color: var(--primary);
+}
+
+/* Testimonials */
+.stars {
+  color: #fbbf24;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+.stars i {
+  margin-right: 4px;
+}
+.author-info {
+  margin-top: 20px;
+}
+.author-info h4 {
+  color: var(--text-dark);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.author-info small {
+  color: var(--text-light);
+}
+
+/* CTA Banner */
+.cta-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.cta-banner {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 32px;
+  padding: 60px 40px;
+  text-align: center;
+  color: white;
+}
+.cta-banner h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.cta-banner p {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+.btn-cta {
+  background: white;
+  color: #3b82f6;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-cta:hover {
+  transform: translateY(-2px);
+}
+.cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 32px;
+}
+.stat-block h3 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.stat-block p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   HOMEPAGE COPYRIGHT NOTICE CARD
+   ========================================================================== */
+.public-domain-card {
+  background-color: var(--bg-card) !important; /* Matches your white cards */
+  border: 1px solid var(--border-color) !important;
+  border-left: 4px solid var(--primary) !important; /* Purple accent bar */
+  border-radius: 4px 20px 20px 4px !important;
+  padding: 30px !important;
+  text-align: left !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02) !important;
+}
+
+.notice-card-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 14px !important;
+}
+
+.notice-card-header i {
+  color: var(--primary) !important;
+  font-size: 1.3rem !important;
+}
+
+.notice-card-header h3 {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--text-dark) !important;
+  margin: 0 !important;
+}
+
+.public-domain-card p {
+  font-size: 0.9rem !important;
+  color: var(--text-light) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
+.public-domain-card p:last-child {
+  margin-bottom: 0 !important;
+}
+
+
+
+/* Footer Section */
+.main-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 60px 0 30px;
+  margin-top: 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+  gap: 40px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 40px;
+}
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-bottom: 16px;
+}
+.logo-icon {
+  background: var(--primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-brand p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+.social-links a {
+  background: #1e293b;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+.social-links a:hover {
+  background: var(--primary);
+}
+.footer-links-col h4 {
+  color: white;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links-col ul li {
+  margin-bottom: 12px;
+}
+.footer-links-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.footer-links-col ul li a:hover {
+  color: white;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  font-size: 0.9rem;
+}
+.footer-bottom-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.footer-bottom-links a:hover {
+  color: white;
+}
+/* Clean styling for the footer email link */
+.footer-email-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.footer-email-contact i {
+  color: var(--primary); /* Uses your main blue/purple accent color */
+  font-size: 1.1rem;
+}
+
+.footer-email-contact a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-email-contact a:hover {
+  color: white; /* Glows white when hovered */
+}
+
+
+/* ==========================================================================
+         Disclaimer 
+    =========================================================================*/
+
+
+/* ==========================================================================
+   DISCLAIMER PAGE STYLES (Clean Card Layout)
+   ========================================================================== */
+.disclaimer-page {
+  padding: 60px 0 !important;
+  max-width: 900px !important; /* Perfect width box for the background card */
+  margin: 0 auto !important;
+}
+
+.disclaimer-header {
+  text-align: center !important;
+  margin-bottom: 30px !important;
+}
+
+.disclaimer-header h1 {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 8px !important;
+}
+
+.disclaimer-header p {
+  font-size: 0.95rem !important;
+  color: var(--text-light) !important;
+}
+
+/* --- THE WHITE CARD CONTAINER SETUP --- */
+.disclaimer-content {
+  background-color: #ffffff !important; /* Crisp white card base */
+  border-radius: 16px !important;       /* Perfectly rounded corners */
+  padding: 40px !important;             /* Generous internal breathing room */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important; /* Smooth soft shadow drop */
+  border: 1px solid #f1f5f9 !important;  /* Ultra-subtle outer border lines */
+  text-align: left !important;
+}
+
+/* Intro Text spacing inside card */
+.disclaimer-intro p {
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  color: #334155 !important;
+  margin-bottom: 30px !important;
+}
+
+/* Sections spacing inside card */
+.disclaimer-content section {
+  margin-bottom: 28px !important;
+  display: block !important;
+}
+
+.disclaimer-content section:last-child {
+  margin-bottom: 0 !important; /* Cleans bottom margin for the final element */
+}
+
+/* Section Title formatting */
+.disclaimer-content h2 {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  margin-bottom: 8px !important;
+}
+
+/* Section Body formatting */
+.disclaimer-content p {
+  font-size: 0.95rem !important;
+  color: #475569 !important;
+  line-height: 1.65 !important;
+}
+
+/* Custom Anchor Link decoration */
+.disclaimer-link {
+  color: var(--primary) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}
+
+.disclaimer-link:hover {
+  text-decoration: underline !important;
+}
+
+.copyright-fairuse-note {
+  background-color: #f8fafc !important;
+  border-left: 4px solid #6366f1 !important;
+  padding: 16px 20px !important;
+  border-radius: 4px 12px 12px 4px !important;
+  margin-bottom: 30px !important;
+}
+.copyright-fairuse-note i {
+  color: #4f46e5;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+.copyright-fairuse-note p {
+  font-size: 1rem !important;
+  color: #475569 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 8px !important;
+}
+.copyright-fairuse-note p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   BACK TO HOME NAVIGATION STYLES
+   ========================================================================== */
+.back-home-wrapper {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  margin-bottom: 20px !important; /* Spacing between button and page title */
+}
+
+.btn-back-home {
+  background: none !important;
+  border: none !important;
+  color: var(--primary) !important; /* Uses your theme's purple color */
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important; /* Space between arrow and text */
+  padding: 0 !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.btn-back-home:hover {
+  color: var(--primary-hover) !important; /* Darkens on hover */
+  transform: translateX(-3px) !important; /* Subtle slide-left interaction hint */
+}
+/* ==========================================================================
+   2. NAVBAR & NAVIGATION
+   ========================================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 8%;
+  background: var(--white);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo { 
+  font-size: 1.5rem; 
+  font-weight: 800; 
+  color: var(--primary); 
+  cursor: pointer; 
+  text-decoration: none; 
+}
+
+.nav-links a { 
+  margin: 0 15px; 
+  text-decoration: none; 
+  color: var(--text-light); 
+  font-weight: 500; 
+  transition: 0.3s; 
+  font-size: 1.1rem; 
+}
+
+.nav-links a:hover { 
+  color: var(--primary); 
+}
+
+/* Primary buttons used for calls to action */
+.btn-explore { 
+  background: var(--primary); 
+  color: white; 
+  border: none; 
+  padding: 10px 25px; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  font-weight: 600; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 1.15rem; 
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-explore:hover { 
+  background: var(--secondary); 
+  transform: translateY(-1px);
+}
+
+.hamburger { 
+  display: none; 
+  background: none; 
+  border: none; 
+  font-size: 1.6rem; 
+  color: var(--primary); 
+  cursor: pointer; 
+}
+
+/* Collapsible navigation block for smaller viewports */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background: var(--white);
+  padding: 10px 0 15px;
+  gap: 5px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.mobile-menu a, .mobile-menu button {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.1rem; 
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mobile-menu .btn-explore {
+  margin: 10px 20px 0;
+  width: calc(100% - 40px);
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+}
+
+/* ==========================================================================
+   3. HOME PAGE HERO & STATS SECTION
+   ========================================================================== */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+    padding: 25px 0 45px;
+}
+
+/* Small status pill/badge above main hero heading */
+.update-tag { 
+  background: #e0e7ff; 
+  color: #4338ca; 
+  padding: 6px 16px; 
+  border-radius: 20px; 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  display: inline-flex; 
+  align-items: center; 
+  margin-bottom: 20px; 
+}
+
+.hero-text h1 { 
+  font-size: 1.5rem; 
+  line-height: 1; 
+  margin-bottom: 10px; 
+  font-weight: 800; 
+}
+
+.hero-text span { 
+  color: var(--primary); 
+}
+
+.hero-text p { 
+  font-size: 1rem; 
+  color: var(--text-light); 
+  margin-bottom: 30px; 
+  line-height: 1; 
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 35px; 
+    box-shadow: 0 25px 50px -12px rgba(79, 70, 229, 0.18); 
+}
+
+/* Informational statistical counting grid */
+.stats-grid { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px; 
+  margin-top: 40px; 
+}
+
+.stat-item { 
+  background: white; 
+  padding: 25px 20px; 
+  border-radius: 20px; 
+  text-align: center; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05); 
+  transition: 0.3s; 
+}
+
+.stat-item:hover { 
+  transform: translateY(-5px); 
+}
+
+.stat-img { 
+  width: 100%; 
+  height: 110px; 
+  object-fit: cover; 
+  border-radius: 12px; 
+  margin-bottom: 12px; 
+}
+
+.stat-item i { 
+  font-size: 1.6rem; 
+  color: var(--primary); 
+  margin-bottom: 8px; 
+  display: block; 
+}
+
+.stat-item h2 { 
+  font-size: 1.8rem; 
+  color: var(--text-dark); 
+  margin-bottom: 4px; 
+}
+
+.stat-item p { 
+  color: var(--text-light); 
+  font-size: 0.95rem; 
+  font-weight: 600; 
+}
+
+/* ==========================================================================
+   4. SEMESTER PAGE LAYOUT
+   ========================================================================== */
+.page-header { 
+  text-align: center; 
+  padding: 20px 0; 
+}
+
+.page-header h1 {
+    font-size: 1.8rem; 
+    font-weight: 700;   
+    color: var(--text-dark);
+}
+
+.header-main-img {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* 4-column display for selection cards */
+.grid-8 { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 30px; 
+}
+
+.sem-card { 
+  background: white; 
+  padding: 30px 20px; 
+  border-radius: 15px; 
+  text-align: center; 
+  border: 1px solid #e2e8f0; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+
+.sem-card:hover { 
+  transform: translateY(-8px); 
+  border-color: var(--primary); 
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); 
+}
+
+/* Numeric indicator indicator inside the cards */
+.sem-num { 
+  width: 48px; 
+  height: 48px; 
+  background: #eff6ff; 
+  color: var(--primary); 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 0 auto 12px; 
+  font-weight: 800; 
+  font-size: 1.25rem; 
+}
+
+/* ==========================================================================
+   5. SUBJECTS DISPLAY PAGE
+   ========================================================================== */
+.back-btn { 
+  color: var(--primary); 
+  cursor: pointer; 
+  font-weight: 600; 
+  margin-bottom: 20px; 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  text-decoration: none; 
+  background: none; 
+  border: none; 
+  font-size: 1.1rem; 
+  padding: 0; 
+}
+
+.back-btn:hover { 
+  text-decoration: underline; 
+}
+
+.page-subheader { 
+  margin-bottom: 30px; 
+}
+
+.page-subheader h1 { 
+  font-size: 2.1rem; 
+  font-weight: 800; 
+  margin-bottom: 6px; 
+}
+
+.page-subheader p { 
+  color: var(--text-light); 
+  font-size: 1.1rem; 
+}
+
+/* 2-column layout for subjects list */
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px; 
+}
+
+.sub-card { 
+  background: white; 
+  padding: 20px; 
+  border-radius: 12px; 
+  border: 1px solid #e2e8f0; 
+  cursor: pointer; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  transition: 0.3s; 
+  text-decoration: none; 
+  color: var(--text-dark); 
+}
+
+.sub-card:hover { 
+  border-color: var(--primary); 
+  transform: translateX(4px); 
+}
+
+.sub-card small { 
+  color: var(--text-light); 
+  font-size: 0.85rem; 
+  display: block; 
+  margin-bottom: 4px; 
+}
+
+.sub-card h3 { 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   6. RESOURCES EXPLORER PAGE
+   ========================================================================== */
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+}
+/* ===================== RESOURCES PAGE ===================== */
+/* .grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
+} */
+
+/* Add this modifier right beneath the grid-3 layout rule */
+.grid-3.syllabus-only {
+  grid-template-columns: 1fr; /* Shifts layout to single column */
+  max-width: 450px;           /* Prevents card from stretching uncontrollably wide */
+  margin: 0 auto;             /* Centers the card perfectly on desktop screen */
+}
+.res-card { 
+  background: white; 
+  padding: 40px 15px; 
+  border-radius: 15px; 
+  text-align: center; 
+  border: 1px solid #e2e8f0; 
+  cursor: pointer; 
+  transition: 0.2s; 
+  text-decoration: none; 
+  color: var(--text-dark); 
+  display: block; 
+}
+
+.res-card:hover { 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.07); 
+  border-color: var(--primary); 
+}
+
+.res-icon { 
+  font-size: 2rem; 
+  margin: 0 auto 12px; 
+  width: 58px; 
+  height: 58px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 12px; 
+}
+
+.res-card h3 { 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  margin-top: 4px; 
+}
+
+/* ==========================================================================
+   7. ICON BACKDROP UTILITIES & ANIMATIONS
+   ========================================================================== */
+.bg-blue   { background: #eff6ff; color: #3b82f6; }
+.bg-red    { background: #fef2f2; color: #ef4444; }
+.bg-purple { background: #f5f3ff; color: #8b5cf6; }
+.bg-green  { background: #f0fdf4; color: #22c55e; }
+.bg-orange { background: #fff7ed; color: #f97316; }
+.bg-navy   { background: #eef2ff; color: #1e3a8a; }
+
+.page-fade { animation: fadeIn 0.35s ease-in-out; }
+@keyframes fadeIn { 
+  from { opacity: 0; transform: translateY(10px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+/* ==========================================================================
+   Coming soon notice global
+   ========================================================================== */
+
+.notice-content {
+  max-width: 650px;
+}
+.notice-icon {
+  width: 110px !important;
+  height: 110px !important;
+  font-size: 3.5rem !important;
+  margin: 0 auto 25px !important;
+  border-radius: 24px;
+}
+.notice-title {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+.notice-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.notice-text {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  line-height: 1.7;
+}   
+/* ==========================================================================
+   8. MEDIA QUERY: LAPTOPS / DESKTOPS ONLY (min-width: 769px)
+   ========================================================================== */
+@media (min-width: 769px) {
+  .sem-card h3 {
+    margin-bottom: 10px; /* Separates semester text line from subtitle only on desktop */
+  }
+  .grid-2-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .footer-bottom {
+    justify-content: space-between !important;
+  }
+  
+  .footer-bottom-links {
+    /* Forces the links row to align where the columns sit */
+    margin-right: 80px !important; 
+  }
+}
+
+/* ==========================================================================
+   9. MEDIA QUERY: LARGE TABLETS & LANDSCAPE (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-text h1 { font-size: 2rem; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-8 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ==========================================================================
+   10. MEDIA QUERY: MOBILE DEVICES (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  body{
+    font-size: 100%
+  }
+  .navbar { padding: 1rem 5%; position: relative; }
+  .nav-links { display: none; }
+  .desktop-only { display: none; }
+  .hamburger { display: block; }
+  .mobile-menu { display: flex; }
+
+  .container { padding: 1.2rem 1rem; }
+  
+  .btn-explore {
+    padding: 10px 22px !important; /* Perfect mobile scale */
+    font-size: 0.95rem !important;
+  }
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 30px 0;
+    gap: 25px;
+  }
+  .hero-text h1 { font-size: 2.1rem; line-height: 1.1; }
+  .hero-text p { font-size: 0.93rem; }
+  .hero-image { order: -1; }
+  .hero-image img {
+    width: 100%;
+    min-height: auto;   
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px -8px rgba(79, 70, 229, 0.15);
+  }
+  .update-tag {
+    font-size: 0.8rem; /* Scaled down badge text */
+    padding: 4px 12px;
+  }
+  .page-header h1 { 
+      font-size: 2rem; 
+  }
+  .page-subheader p {
+    font-size: 0.9rem;
+  }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 25px; }
+  .stat-img { height: 80px; }
+  .stat-item { padding: 15px 12px; }
+  .stat-item h2 { font-size: 1.5rem; }
+
+  .section-title { font-size: 1.8rem; }
+  .section-desc { font-size: 0.95rem; margin-bottom: 32px; }
+  
+  .cta-banner { padding: 40px 20px; }
+  .cta-banner h2 { font-size: 1.8rem; }
+  .cta-banner p { font-size: 0.95rem; }
+  .cta-stats { gap: 20px; flex-direction: row; }
+  .stat-block h3 { font-size: 1.5rem; }
+
+  /* Mobile Tweak */
+
+  .public-domain-card {
+    padding: 20px 16px !important;
+  }
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px 16px !important;
+  }
+
+  .footer-brand, 
+  .footer-grid > div:first-child {
+    grid-column: span 2 !important;
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Align the side-by-side columns cleanly */
+  .footer-links-col {
+    grid-column: span 1 !important;
+  }
+
+  .footer-links-col h4 {
+    margin-bottom: 12px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .footer-links-col ul li {
+    margin-bottom: 10px !important;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer-bottom-links a {
+    margin: 0 10px;
+  }
+  .grid-2-desktop {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* --- MOBILE COMPACT OPTIMIZATION --- */
+
+  .disclaimer-page {
+    padding: 30px 12px !important;
+  }
+  
+  .disclaimer-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .disclaimer-content {
+    padding: 24px 16px !important; /* Tighter padding margins on smartphones */
+    border-radius: 12px !important;
+  }
+
+
+  /* ===================== MOBILE OVERRIDES FOR ABOUT PAGE ===================== */
+  
+  /* Adds proper breathing room inside the page container on mobile screens */
+  .about-page {
+    padding: 30px 15px !important;
+  }
+
+  /* Reduces the large margin spacing between blocks */
+  .about-page > div[style*="margin"] {
+    margin: 30px auto !important;
+    gap: 24px !important;
+  }
+
+  /* Scales down the main about page header text */
+  .about-page h1[style*="fontSize: '2.5rem'"] {
+    font-size: 1.8rem !important;
+  }
+
+  /* Scales down section headers inside the wrapper */
+  .about-page h2 {
+    font-size: 1.4rem !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Adjusts the text size for "The Problem" and "Our Solution" headers */
+  .about-page h3 {
+    font-size: 1.15rem !important;
+  }
+
+  /* Adjusts the text size for card headers */
+  .about-page h4 {
+    font-size: 1.1rem !important;
+  }
+
+  /* Standardizes card descriptions and paragraph structures for small viewports */
+  .about-page p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Scales down the resource icon layouts so they fit inside mobile grid rows */
+  .about-page .res-icon {
+    width: 65px !important;
+    height: 65px !important;
+    font-size: 1.8rem !important;
+    border-radius: 16px !important;
+  }
+
+  .grid-8 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .sem-card { padding: 10px 10px; }
+  .sem-num { 
+    width: 38px;       
+    height: 38px; 
+    font-size: 1rem;   
+    margin: 0 auto 8px; 
+  }
+  
+  /* Text rules for small screen card viewports */
+  .sem-card h3 {
+    font-size: 1.rem; 
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .sem-card p {
+    font-size: 0.9rem; 
+    color: var(--text-light); 
+    line-height: 1.3;
+    margin: 0;
+  }
+  
+  .header-main-img { height: 150px; border-radius: 15px; }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .page-subheader h1 { font-size: 1.5rem; }
+
+  .grid-3 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .res-card { padding: 28px 10px; }
+  .res-icon { width: 50px; height: 50px; font-size: 1.7rem; }
+  .res-card h3 { font-size: 0.95rem; }
+
+  .notice-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .notice-icon {
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 2.2rem !important;
+    margin: 0 auto 15px !important;
+    border-radius: 16px;
+  }
+  .notice-title {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  .notice-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  .notice-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+    /* ===================== HOME PAGE MODULES OVERRIDES ===================== */
+
+  /* Force grid-3 layouts (Features and Testimonials) into a single vertical column */
+  .features-section .grid-3,
+  .testimonials-section .grid-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* Fix padding inside the cards so they aren't cramped */
+  .feature-card, 
+  .testimonial-card {
+    padding: 24px 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* --- READY TO ACE (CTA BANNER) MOBILE FIX --- */
+  /* --- READY TO ACE (CTA BANNER) MOBILE FIX --- */
+  .cta-section {
+    padding: 0 15px !important;
+    margin: 40px 0 !important;
+  }
+
+  .cta-banner {
+    padding: 40px 20px !important;
+    border-radius: 24px !important;
+  }
+
+  .cta-banner h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3;
+  }
+
+  .cta-banner p {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+
+  /* Force stats to stay side-by-side horizontally on mobile */
+  .cta-stats {
+    display: flex !important;
+    flex-direction: row !important; /* Forces side-by-side layout */
+    justify-content: space-around !important; /* Evenly distributes spacing */
+    gap: 10px !important; /* Controls separation between blocks */
+    margin-top: 32px !important;
+    padding-top: 24px !important;
+  }
+
+  /* Scale down the font sizes slightly so they fit comfortably on small viewports */
+  .stat-block h3 {
+    font-size: 1.4rem !important; 
+    margin-bottom: 4px !important;
+  }
+
+  .stat-block p {
+    font-size: 0.75rem !important;
+    opacity: 0.8;
+  }
+  /* --- FOOTER MOBILE FIX --- */
+  /* ===================== FINAL FIXED MOBILE FOOTER ===================== */
+  .main-footer {
+    padding: 30px 20px 20px !important;
+    margin-top: 50px !important;
+  }
+
+  /* Target the overall container grid */
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Creates a clean, balanced 2-column layout */
+    gap: 24px 16px !important; /* 24px vertical row gap, 16px horizontal column gap */
+  }
+
+  /* Force the main branding text block to span across both columns at the top */
+  .footer-brand {
+    grid-column: span 2 !important;
+    width: 100% !important;
+    margin-bottom: 8px;
+  }
+
+  /* Style footer column text size to keep it sharp and legible */
+  .footer-links-col h4 {
+    font-size: 1.05rem !important;
+    margin-bottom: 12px !important;
+    color: white !important;
+  }
+
+  .footer-links-col ul {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer-links-col ul li {
+    margin-bottom: 8px !important;
+    list-style: none !important;
+  }
+
+  .footer-links-col ul li a {
+    font-size: 0.9rem !important;
+    line-height: 1.4;
+    display: block;
+  }
+  .footer-links-col{
+    grid-column: span 1 !important;
+  }
+  /* Force the Legal column to take up a full row underneath the first two columns */
+  .footer-links-col:last-child {
+    grid-column: span 1 !important;
+    margin-top: 8px;
+  }
+
+  /* Copyright Bottom Line alignment */
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 12px !important;
+    text-align: center !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #1e293b;
+    margin-top: 24px;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-bottom-links a {
+    margin: 0 !important;
+    font-size: 0.85rem;
+  }
+
+  .disclaimer-page {
+    padding: 30px 0;
+  }
+  .disclaimer-header h1 {
+    font-size: 2rem !important;
+  }
+  .disclaimer-intro {
+    font-size: 1rem !important;
+    padding: 12px 15px;
+  }
+}
+
+/* ==========================================================================
+   11. MEDIA QUERY: SMALL MOBILE PHONE MONITORS (max-width: 400px)
+   ========================================================================== */
+@media (max-width: 400px) {
+  .hero-text h1 { font-size: 1.9rem; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .grid-8 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==========================================================================
+   12. MEDIA QUERY: WIDE DESKTOP DISPLAYS & HI-RES (min-width: 1400px)
+   ========================================================================== */
+@media (min-width: 1400px) {
+    .container {
+        width: 90% !important;
+        max-width: 1200px !important;
+        padding: 2.5rem 5%;
+        margin: 0 auto !important;
+        font-size: 1rem;
+    }
+
+    .hero-container {
+    display: flex !important;
+    flex-direction: row !important; /* Keeps left-right position unchanged */
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 40px !important; 
+    padding: 35px 0 !important; /* Reduced vertical padding */
+  }
+
+    .navbar {
+        padding: 1.3rem 5%;
+    }
+    .logo {
+        font-size: 2rem; 
+    }
+    .nav-links a {
+        font-size: 1rem; 
+        margin: 0 20px;
+    }
+    .btn-explore {
+        padding: 12px 34px;
+        font-size: 1rem; 
+    }
+    
+    /* Subject listings desktop adjustments */
+    .sub-card small {
+      font-size: 0.9rem; 
+      margin-bottom: 5px;
+    }
+    .sub-card h3 { 
+      font-size: 1rem; 
+      font-weight: 600;
+    }
+    
+    .hero-section {
+        margin-top: 0px;
+        gap: 90px;
+        padding: 60px 0 20px; 
+    }
+    .hero-text h1 {
+        font-size: 3rem; 
+        line-height: 1.1;
+    }
+    .hero-text p {
+        font-size: 1rem; 
+        line-height: 1.7;
+    }
+    .update-tag {
+        font-size: 1.10rem; 
+        padding: 7px 16px;
+    }
+    .hero-image img {
+      min-height: 400px;  
+      border-radius: 35px;
+    }    
+
+    .page-header h1 {
+        font-size: 2rem; 
+        margin-bottom: 6px; 
+        font-weight: 700;
+    }
+    .page-subheader h1 {
+        font-size: 2rem; 
+        font-weight: 700;
+    }
+    .feature-card, 
+    .testimonial-card {
+      padding: 24px 20px !important;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+    .section-desc {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+
+    .cta-banner {
+      padding: 40px 20px !important;
+      border-radius: 24px !important;
+    }
+
+    .cta-banner h2 {
+      font-size: 1.8rem !important;
+      line-height: 1.3;
+    }
+
+    .cta-banner p {
+      font-size: 0.95rem !important;
+      margin-bottom: 24px !important;
+    }
+
+    /* Force stats to stay side-by-side horizontally on mobile */
+    .cta-stats {
+      display: flex !important;
+      flex-direction: row !important; /* Forces side-by-side layout */
+      justify-content: space-around !important; /* Evenly distributes spacing */
+      gap: 10px !important; /* Controls separation between blocks */
+      margin-top: 32px !important;
+      padding-top: 24px !important;
+    }
+    .footer-links-col ul {
+      margin-left: 12px;
+    }
+    .footer-links-col ul li {
+      margin-left: 12px;
+    }
+    .footer-links-col h4 {
+      color: white;
+      margin-left: 20px;
+      font-size: 1.05rem;
+    }
+    .stat-block h3 {
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+    .stat-block p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .stats-grid {
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .stat-item {
+        padding: 20px;
+    }
+    .stat-img {
+        height: 140px;
+    }
+    .stat-item h2 {
+        font-size: 2rem; 
+    }
+    .stat-item p {
+        font-size: 1rem; 
+    }
+
+    .grid-8 {
+        gap: 10px;
+    }
+    .sem-card {
+        margin-left: 10px;
+        padding: 20px 15px;
+        border-radius: 22px;
+    }
+    .sem-num {
+        font-size: 1.8rem; 
+    }
+    .sem-card h3 {
+        font-size: 1.3rem; 
+    }
+    .sem-card p {
+        font-size: 0.95rem; 
+        color: var(--text-light); 
+        line-height: 1.3;
+        margin: 0;
+    }
+    
+    .grid-2 {
+        gap: 20px;
+    }
+    .sub-card {
+        padding: 20px;
+        font-weight: 600; 
+        line-height: 1.4;
+    }
+
+    .grid-3 {
+        gap: 20px;
+    }
+    .res-card {
+        padding: 35px 20px;
+    }
+    .res-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem; 
+    }
+    .res-card h3 {
+        font-size: 1.35rem; 
+    }
+
+    .notice-content {
+    max-width: 90%;
+    padding: 0 10px;
+    }
+    .notice-icon {
+      width: 70px !important;
+      height: 70px !important;
+      font-size: 2.2rem !important;
+      margin: 0 auto 15px !important;
+      border-radius: 16px;
+    }
+    .notice-title {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+    .notice-subtitle {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .notice-text {
+      font-size: 0.90rem;
+      line-height: 1.3;
+    }
+}
