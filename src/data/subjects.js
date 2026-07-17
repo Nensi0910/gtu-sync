@@ -1045,7 +1045,6 @@ const subjectsData = {
         ppts: '',
         books: '',
       }
-      
     },
   ],
 };
