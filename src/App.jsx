@@ -14,6 +14,7 @@ export default function App() {
   return (
     <HashRouter>
       <ScrollToTop />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/materials" element={<Materials />} />
