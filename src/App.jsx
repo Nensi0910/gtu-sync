@@ -7,12 +7,13 @@ import Subjects from './pages/Subjects';
 import Resources from './pages/Resources';
 import About from './pages/About';
 import Disclaimer from './pages/Disclaimer';
+import ScrollToTop from './components/ScrollToTop';
 import './index.css';
 
 export default function App() {
   return (
     <HashRouter>
-      <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/materials" element={<Materials />} />
