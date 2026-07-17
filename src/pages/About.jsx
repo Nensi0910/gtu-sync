@@ -74,7 +74,7 @@ export default function About() {
               <div className="res-icon bg-purple" style={{ margin: '0 auto' }}>
                 <i className="fa-solid fa-question"></i>
               </div>
-              <h4 style={{ margin: '15px 0 8px', fontWeight: '700', fontSize: '1.15rem' }}>Solved Papers</h4>
+              <h4 style={{ margin: '15px 0 8px', fontWeight: '700', fontSize: '1.15rem' }}>Question Papers</h4>
               <p style={{ fontSize: '0.9rem' }}>Access to previous year question sets to decode recurring paper patterns.</p>
             </div>
 
