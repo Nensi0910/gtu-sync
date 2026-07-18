@@ -231,10 +231,10 @@ export default function Home() {
             <ul>
               {/* If you have a separate /about route, map it here, otherwise keep as placeholder */}
               <li><a href="#" onClick={(e) => { e.preventDefault(); navigate('/about'); }}>About Us</a></li>
-              <li><a href="mailto:gtusync.study@gmail.com">Contact</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>Careers</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>Blog</a></li>
-              <li><a href="#" onClick={(e) => e.preventDefault()}>FAQs</a></li>
+              <li><a href="mailto:gtusync.study@gmail.com">Contact us</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); navigate('/about'); }}>Documentation</a></li>
+              <li><a href="mailto:gtusync.study@gmail.com">Support</a></li>
+              <li><a href="#" onClick={(e) => { e.preventDefault(); navigate('/disclaimer'); }}>Disclaimer</a></li>
             </ul>
           </div>
 
@@ -253,12 +253,12 @@ export default function Home() {
 
         <div className="container footer-bottom">
           <p>© 2026 GTU Sync. All rights reserved.</p>
-          <div className="footer-bottom-links">
+          {/* <div className="footer-bottom-links">
             <a href="mailto:gtusync.study@gmail.com">Support</a>
             <a href="#" onClick={(e) => { e.preventDefault(); navigate('/about'); }}>Documentation</a>
             <a href="#" onClick={(e) => { e.preventDefault(); navigate('/materials'); }}>Status</a>
             <a href="#" onClick={(e) => { e.preventDefault(); navigate('/disclaimer'); }}>Disclaimer</a>
-          </div>
+          </div> */}
         </div>
       </footer>
     </div>
