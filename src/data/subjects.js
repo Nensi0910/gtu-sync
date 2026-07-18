@@ -4,7 +4,7 @@ const subjectsData = {
       code: 'BE01R00011',
       name: 'Student Induction Program with essence of Indian Knowledge System',
       links: {
-        notes: '',        // <-- paste link
+        notes: 'https://drive.google.com/drive/folders/1v6SLR0vDaj1FfgjN9SAlYmz66k53jNQ2?usp=drive_link',        // <-- paste link
         youtube: '',
         pyq: '',
         syllabus: 'https://drive.google.com/drive/u/4/folders/1SkXhwlx52RioyFUlR6ipOvo-ncsTEs8C',
@@ -24,18 +24,18 @@ const subjectsData = {
         books: 'https://drive.google.com/drive/folders/16ygcRfs3eYL51Qj2mSWhnXaVvmUIO4EK?usp=drive_link',
       }
     },
-    {
-      code: 'BE01R00031',
-      name: 'Chemistry',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'https://drive.google.com/drive/folders/1oVUXaXiP6GcisQR2LtLZlIwpKu5I0UGv?usp=drive_link',
-        syllabus: 'https://drive.google.com/file/d/19sbu5EE5311rF_fvphvxn7f3-I09xMUY/view?usp=drive_link',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
+    // {
+    //   code: 'BE01R00031',
+    //   name: 'Chemistry',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'https://drive.google.com/drive/folders/1oVUXaXiP6GcisQR2LtLZlIwpKu5I0UGv?usp=drive_link',
+    //     syllabus: 'https://drive.google.com/file/d/19sbu5EE5311rF_fvphvxn7f3-I09xMUY/view?usp=drive_link',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
     {
       code: 'BE01R00041',
       name: 'Mathematics-I',
