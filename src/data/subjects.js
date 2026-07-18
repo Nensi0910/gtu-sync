@@ -656,30 +656,30 @@ const subjectsData = {
         books: 'coming-soon',
       }
     },
-    {
-      code: 'MOOC-001',
-      name: 'MOOC - Business Analytics and Data Mining Modeling using R',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
-    {
-      code: 'MOOC-002',
-      name: 'MOOC - The Joy of Computing using Python',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
+    // {
+    //   code: 'MOOC-001',
+    //   name: 'MOOC - Business Analytics and Data Mining Modeling using R',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
+    // {
+    //   code: 'MOOC-002',
+    //   name: 'MOOC - The Joy of Computing using Python',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
   ],
   6: [
     {
@@ -814,30 +814,30 @@ const subjectsData = {
         books: 'https://drive.google.com/drive/folders/1cTQ53sFK5LR_JBbEH2XucVB-_Dbsmx4O',
       }
     },
-    {
-      code: 'ELEC-001',
-      name: 'Business Intelligence & Analytics',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
-    {
-      code: 'ELEC-002',
-      name: 'Computer Vision and Image Processing - Fundamentals and Applications',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
+    // {
+    //   code: 'ELEC-001',
+    //   name: 'Business Intelligence & Analytics',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
+    // {
+    //   code: 'ELEC-002',
+    //   name: 'Computer Vision and Image Processing - Fundamentals and Applications',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
   ],
   7: [
     {
@@ -1008,30 +1008,30 @@ const subjectsData = {
         books: 'https://drive.google.com/drive/folders/1wOT3avoUWREuVHKRipK84Cu8vOi4FA2w',
       }
     },
-    {
-      code: 'MOOC-003',
-      name: 'MOOC - Cloud Computing',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
-    {
-      code: 'MOOC-004',
-      name: 'MOOC - Deep Learning - IIT Ropar',
-      links: {
-        notes: 'coming-soon',
-        youtube: 'coming-soon',
-        pyq: 'coming-soon',
-        syllabus: 'coming-soon',
-        ppts: 'coming-soon',
-        books: 'coming-soon',
-      }
-    },
+    // {
+    //   code: 'MOOC-003',
+    //   name: 'MOOC - Cloud Computing',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
+    // {
+    //   code: 'MOOC-004',
+    //   name: 'MOOC - Deep Learning - IIT Ropar',
+    //   links: {
+    //     notes: 'coming-soon',
+    //     youtube: 'coming-soon',
+    //     pyq: 'coming-soon',
+    //     syllabus: 'coming-soon',
+    //     ppts: 'coming-soon',
+    //     books: 'coming-soon',
+    //   }
+    // },
   ],
   8: [
     {
