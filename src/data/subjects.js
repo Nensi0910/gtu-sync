@@ -7,7 +7,7 @@ const subjectsData = {
         notes: '',        // <-- paste link
         youtube: '',
         pyq: '',
-        syllabus: 'coming-soon',
+        syllabus: 'https://drive.google.com/drive/u/4/folders/1SkXhwlx52RioyFUlR6ipOvo-ncsTEs8C',
         ppts: '',
         books: '',
       }
@@ -17,7 +17,7 @@ const subjectsData = {
       name: 'Physics',
       links: {
         notes: 'https://drive.google.com/drive/folders/1dMvSK9g51em_n8pe4ZheQ82mwLnxQDwk?usp=drive_link',
-        youtube: 'coming-soon',
+        youtube: 'https://www.youtube.com/watch?v=3QQWi8Rtaxg&list=PL3qvHcrYGy1u112gfsHycdWaLTVRt8ame',
         pyq: 'https://drive.google.com/drive/folders/1re5zKiCd42ly5fIGMlMJT6qvB-37BKYH?usp=drive_link',
         syllabus: 'https://drive.google.com/drive/folders/17MZM30nsSJgaDPPy26Z8jbE7kqW-PP4r?usp=drive_link',
         ppts: 'https://drive.google.com/drive/folders/1ROzAYNHV4psdULX1eT2dpwQ8buPF9-2u?usp=drive_link',
